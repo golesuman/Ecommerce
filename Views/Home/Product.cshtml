@@ -1,0 +1,26 @@
+@model IEnumerable<Cloth>
+
+
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+
+<body>
+    @foreach (var product in Model)
+    {
+        <div class="container">
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header bg-primary text-white">@product.Name</div>
+                <div class="card-body">
+                    <img src="~/Home/wall.jpg" class="img-fluid mb-3" alt="Cloth Image">
+                    <h4 class="card-title">$@product.Price</h4>
+                    <p class="card-text">@product.Description</p>
+                </div>
+            </div>
+        </div>
+    }
+</body>
